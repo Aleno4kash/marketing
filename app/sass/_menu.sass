@@ -1,0 +1,60 @@
+.menu
+  text-align: right
+  padding-top: 30px
+  height: 45px
+
+.menu__icon
+  display: none
+  width: 45px
+  height: 35px
+  position: relative
+  overflow-x: none
+  cursor: pointer
+  span
+    display: block
+    position: absolute
+    height: 5px
+    width: 100%
+    background: #333333
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+    &:nth-child(1)
+      top: 0px
+    &:nth-child(2), &:nth-child(3)
+      top: 13px
+    &:nth-child(4)
+      top: 26px
+
+.menu__links-item
+  display: inline-block
+  color: #333333
+  font-family: $font_f
+  font-weight: $font_w
+  font-size: $font_s+2px
+  line-height: 30px
+  padding: 0 10px
+  text-decoration: none
+  cursor: pointer
+  &:hover
+    color: #858585
+
+.menu.menu_state_open
+  .menu__icon span
+    &:nth-child(1)
+      top: 18px
+      width: 0%
+      left: 50%
+    &:nth-child(2)
+      transform: rotate(45deg)
+    &:nth-child(3)
+      transform: rotate(-45deg)
+    &:nth-child(4)
+      top: 18px
+      width: 0%
+      left: 50%
+  .menu__links
+    display: block
+
